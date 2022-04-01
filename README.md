@@ -1,7 +1,7 @@
 # Soluție hackathon
 
 ## Descriere soluție
-Am folosit modelul de NER pentru limba română disponibil din biblioteca huggingface, poate fi găsit la link-ul următor: https://huggingface.co/dumitrescustefan/bert-base-romanian-ner.
+Am folosit modelul de NER pentru limba română disponibil în biblioteca huggingface, poate fi găsit la link-ul următor: https://huggingface.co/dumitrescustefan/bert-base-romanian-ner.
 Am folosit ponderile pre-antrenate, dar am adăugat un strat liniar de 16 neuroni la final, deoarece modelul de pe huggingface funcționează cu 31 de clase, fiind bazat pe un corpus etichetat
 în stil BIO2, și am antrenat toate bias-urile modelului.
 
@@ -18,7 +18,7 @@ cuvânt.
 Lista completă este în fișierul ```requirements.txt```
 
 ## Rulare soluție
-Este suficientă rularea pe rând a cell-urilor din notebook, cu mențiunea că unele trebuie rulate doar în cazul în care este folosit collab. De asemenea, dacă este rulat
+Este suficientă rularea pe rând a cell-urilor din notebook, cu mențiunea că unele trebuie rulate doar în cazul în care este folosit collab. De asemenea, dacă este rulată
 local soluția, atunci datele de testare și antrenare ar trebui să fie la același file level cu notebook-ul.
 
 ## Bibliografie
