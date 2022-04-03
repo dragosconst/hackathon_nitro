@@ -6,7 +6,7 @@ Am folosit ponderile pre-antrenate, dar am adăugat un strat liniar de 16 neuron
 în stil BIO2, și am antrenat toate bias-urile modelului.
 
 Ca pre-procesări, am înlocuit orice posibile caractere cu sedilă cu varianta lor cu diacritice, după cum sugereaza Ștefan Dumitrescu, autorul modelului, și am mai înlocuit
-câteva caractere pe care tokenizer-ul modelului le elimina din lista de tokeni cu niște denumiri unice. Mai exact, am înlocuit '\n' cu "NTOK", ' ' și '\xao' cu "WS". Deși
+câteva caractere pe care tokenizer-ul modelului le elimina din lista de tokeni cu niște denumiri unice. Mai exact, am înlocuit '\n' cu "NTOK", ' ' și '\xa0' cu "WS". Deși
 la prima vedere poate nu pare o idee foarte bună, am reușit să obținem o performanță de 76% în final cu strategia aceasta de pre-procesare.
 
 Am făcut și niște post-procesări la datele de testare, deoarece tokenizer-ul adaugă tokeni în plus, iar pe alții îi sparge în mai mulți tokeni. Tokenii care nu au corespondent
