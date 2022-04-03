@@ -9,8 +9,8 @@ Ca pre-procesări, am înlocuit orice posibile caractere cu sedilă cu varianta 
 câteva caractere pe care tokenizer-ul modelului le elimina din lista de tokeni cu niște denumiri unice. Mai exact, am înlocuit '\n' cu "NTOK", ' ' și '\xa0' cu "WS". Deși
 la prima vedere poate nu pare o idee foarte bună, am reușit să obținem o performanță de 76% în final cu strategia aceasta de pre-procesare.
 
-Am făcut și niște post-procesări la datele de testare, deoarece tokenizer-ul adaugă tokeni în plus ([CLS], [SEP] etc.), iar pe unii tokeni îi sparge în mai mulți sub-tokeni (word pieces). Tokenii care nu au corespondent
-în tokenii inițiali, cum ar fi '[CLS]' sau '[SEP]' i-am ignorat complet, iar pentru tokenii care corespund unui tokeni din lista originală, am scris în fișierul de submisie
+Am făcut și niște post-procesări la datele de testare, deoarece tokenizer-ul adaugă tokeni în plus ([CLS], [SEP] etc.), iar pe unii tokeni îi sparge în mai mulți sub-tokeni (word pieces). Pe tokenii care nu au corespondent
+în tokenii inițiali, cum ar fi '[CLS]' sau '[SEP]', i-am ignorat complet, iar pentru tokenii care corespund unui token din lista originală, am scris în fișierul de submisie
 doar primul token dintre ei întâlnit în listă, în ideea că, deoarece am redus clasele la 16, ar trebui ca modelul să învețe să dea aceeași clasă tuturor părților unui
 cuvânt.
 
